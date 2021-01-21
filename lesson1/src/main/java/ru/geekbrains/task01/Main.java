@@ -1,4 +1,4 @@
-package ru.geekbrains.terentev.task01;
+package ru.geekbrains.task01;
 
 public class Main {
     public static void main(String[] args) {
