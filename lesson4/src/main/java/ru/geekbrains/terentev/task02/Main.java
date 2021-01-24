@@ -115,30 +115,6 @@ public class Main {
         int mainDiag = 0;
         int secondaryDiag = 0;
 
-//        if (MAP[0][0] == dot && MAP[0][1] == dot && MAP[0][2] == dot) {
-//            return true;
-//        }
-//
-//        if (MAP[1][0] == dot && MAP[1][1] == dot && MAP[1][2] == dot) {
-//            return true;
-//        }
-//
-//        if (MAP[2][0] == dot && MAP[2][1] == dot && MAP[2][2] == dot) {
-//            return true;
-//        }
-//
-//        if (MAP[0][0] == dot && MAP[1][0] == dot && MAP[2][0] == dot) {
-//            return true;
-//        }
-//
-//        if (MAP[0][1] == dot && MAP[1][1] == dot && MAP[2][1] == dot) {
-//            return true;
-//        }
-//
-//        if (MAP[0][2] == dot && MAP[1][2] == dot && MAP[2][2] == dot) {
-//            return true;
-//        }
-
         for (int i = 0; i < SIZE; i++) {
             if (MAP[i][i] == dot) {
                 mainDiag++;
@@ -151,14 +127,6 @@ public class Main {
 
         if (mainDiag == SIZE) return true;
         if (secondaryDiag == SIZE) return true;
-
-//        if (MAP[0][0] == dot && MAP[1][1] == dot && MAP[2][2] == dot) {
-//            return true;
-//        }
-//
-//        if (MAP[2][0] == dot && MAP[1][1] == dot && MAP[0][2] == dot) {
-//            return true;
-//        }
 
         return checkWinInDirection(0, DOWN, dot) || checkWinInDirection(0, SIDE, dot)
                 || checkWinInDirection(1, DOWN, dot) || checkWinInDirection(1, SIDE, dot)
