@@ -123,14 +123,11 @@ public class Main {
             if (MAP[i][(SIZE - 1) - i] == dot) {
                 secondaryDiag++;
             }
+
+            if (checkWinInDirection(i , DOWN, dot) || checkWinInDirection(i, SIDE, dot)) return true;
         }
 
-        if (mainDiag == SIZE) return true;
-        if (secondaryDiag == SIZE) return true;
-
-        return checkWinInDirection(0, DOWN, dot) || checkWinInDirection(0, SIDE, dot)
-                || checkWinInDirection(1, DOWN, dot) || checkWinInDirection(1, SIDE, dot)
-                || checkWinInDirection(2, DOWN, dot) || checkWinInDirection(2, SIDE, dot);
+        return mainDiag == SIZE || secondaryDiag == SIZE;
     }
 
     static boolean checkWinInDirection(int fixedCoordinate, char direction, char dot) {
