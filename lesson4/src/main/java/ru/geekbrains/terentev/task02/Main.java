@@ -7,16 +7,16 @@ public class Main {
 
     private static final int SIZE = 3;
 
-    private static char FREE_DOT = '#';
-    private static char USER_DOT = 'X';
-    private static char AI_DOT = '0';
+    private static final char FREE_DOT = '#';
+    private static final char USER_DOT = 'X';
+    private static final char AI_DOT = '0';
 
-    private static char DOWN = 'd';
-    private static char SIDE = 's';
+    private static final char DOWN = 'd';
+    private static final char SIDE = 's';
 
     private static char[][] MAP;
-    private static Scanner scanner = new Scanner(System.in);
-    private static Random random = new Random();
+    private static final Scanner scanner = new Scanner(System.in);
+    private static final Random random = new Random();
 
     public static void main(String[] args) {
         prepareMap();
